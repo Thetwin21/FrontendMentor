@@ -1,0 +1,45 @@
+.p_text {
+    color: #8c8c8c;
+}
+.btn_color{
+    color:  #d9d9d9;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 22px;
+    width: fit-content;
+    right: 0;
+    min-width: calc(fit-content + 10px);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown_content a {
+    color: #8c8c8c;
+    width: 100%;
+    display: inline-flex;
+
+  }
+  
+  /* Show the dropdown content when hovering over the dropdown button */
+  .dropdown:hover .dropdown_content {
+    display: flex;
+  }
+  .dropdown:hover .icon_img {
+    transform: rotate(180deg);
+    display: none;
+  }
+  

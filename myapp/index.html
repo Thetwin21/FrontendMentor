@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>detwins Hacktoberfest project</title>
+  </head>
+  <body>
+    <section
+      class="flex justify-center w-full min-w-screen h-full min-h-screen bg-[#fafafa]"
+    >
+      <div class="w-full max-w-7xl">
+        <nav
+          class="grid p-4 h-fit grid-cols-1 md:grid-cols-2 justify-between items-center w-full bg-blue"
+        >
+          <div class="flex w-full justify-between items-center">
+            <header class="text-black font-bold text-3xl">Detwins</header>
+            <ul
+              class="hidden md:flex justify-between items-center gap-x-5 font-semibold p_text"
+            >
+              <li class="dropdown hover:text-black">
+                <a class="dropbtn" href="">Features</a>
+                <div
+                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2"
+                >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                    ><img src="../images/icon-todo.svg" alt="" />
+                    <p class="flex">TodoList</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                    ><img src="../images/icon-calendar.svg" alt="" />
+                    <p>Calenders</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                  >
+                    <img src="../images/icon-reminders.svg" alt="" />
+                    <p>Reminders</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                  >
+                    <img src="../images/icon-planning.svg" alt="" />
+                    <p>Planning</p></a
+                  >
+                </div>
+              </li>
+              <li class="dropdown hover:text-black">
+                <a class="dropbtn flex gap-x-2 items-center group" href=""
+                  ><p>Company</p>
+                  <span><img src="../images/icon-arrow-down.svg" alt="" /></span
+                ></a>
+
+                <div
+                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                >
+                  <a class="hover:text-black w-full" href="#">History</a>
+                  <a class="hover:text-black w-fit" href="#">Our Team</a>
+                  <a class="hover:text-black w-full" href="#">Blog</a>
+                </div>
+              </li>
+              <li class="hover:text-black"><a href="">Careers</a></li>
+              <li class="hover:text-black"><a href="">About</a></li>
+            </ul>
+          </div>
+
+          <!-- mobile navbar -->
+          <div class="w-full p-4 ">
+            <ul
+              class="flex flex-col md:hidden gap-y-6 justify-centeritems-start font-semibold p_text"
+            >
+              <li class="dropdown hover:text-black">
+                <a class="dropbtn" href="">Features</a>
+                <div
+                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                    ><img src="../images/icon-todo.svg" alt="" />
+                    <p class="flex">TodoList</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                    ><img src="../images/icon-calendar.svg" alt="" />
+                    <p>Calenders</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                  >
+                    <img src="../images/icon-reminders.svg" alt="" />
+                    <p>Reminders</p></a
+                  >
+                  <a
+                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                    href="#"
+                  >
+                    <img src="../images/icon-planning.svg" alt="" />
+                    <p>Planning</p></a
+                  >
+                </div>
+              </li>
+              <li class="dropdown hover:text-black group">
+                <a class="dropbtn flex gap-x-2 items-center group" href=""
+                  ><p>Company</p>
+                  <span class="icon_img">
+                    <img class="group"  src="../images/icon-arrow-down.svg" alt="" />
+                    <img  src="../images/icon-arrow-down.svg" alt="" />
+                </span>
+            </a>
+
+                <div
+                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                >
+                  <a class="hover:text-black w-full" href="#">History</a>
+                  <a class="hover:text-black w-fit" href="#">Our Team</a>
+                  <a class="hover:text-black w-full" href="#">Blog</a>
+                </div>
+              </li>
+              <li class="hover:text-black"><a href="">Careers</a></li>
+              <li class="hover:text-black"><a href="">About</a></li>
+            </ul>
+            <div class="flex flex-col md:justify-end md:gap-x-2 md:flex-row gap-y-2 mt-3">
+              <button
+                class="rounded-lg border-2 border-solid py-2 px-4 transition duration-300 ease-in-out hover:border-gray-500 font-semibold p_text"
+              >
+                Login
+              </button>
+              <button
+                class="rounded-lg border-2 border-solid border-gray-500 px-4 py-2 font-semibold p_text"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </nav>
+
+
+        <!-- main component -->
+        <main class="grid grid-cols-2 gap-x-5 w-full text-start">
+          <div class="flex flex-col items-start w-full gap-y-14 pt-24">
+            <h1 class="text-3xl md:text-6xl font-bold">
+              Make <br />
+              remote work
+            </h1>
+            <div class="font-semibold p_text">
+              <p>Get your team in sync, no matter your location.</p>
+              <p>Streamline processes, create team rituals, and</p>
+              <p>watch productivity soar.</p>
+            </div>
+            <button
+              class="rounded-lg border border-solid border-black px-5 py-2 bg-black btn_color font-semibold hover:text-white"
+            >
+              Learn more
+            </button>
+            <div class="w-full">
+              <div
+                class="flex items-center justify-between w-full gap-x-2 h-6 pr-5"
+              >
+                <img class="h-full" src="../images/client-databiz.svg" alt="" />
+                <img
+                  class="h-full"
+                  src="../images/client-audiophile.svg"
+                  alt=""
+                />
+                <img class="h-full" src="../images/client-meet.svg" alt="" />
+                <img class="h-full" src="../images/client-maker.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                class="hidden md:block"
+                src="../images/image-hero-desktop.png"
+                alt=""
+              />
+              <img
+                class="block md:hidden"
+                src="../images/image-hero-mobile.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+  </body>
+</html>
