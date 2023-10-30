@@ -25,66 +25,14 @@
               class="hidden md:flex justify-between items-center gap-x-5 font-semibold p_text"
             >
               <li class="dropdown hover:text-black">
-                <a class="dropbtn" href="">Features</a>
-                <div
-                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2"
-                >
-                  <a
-                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
-                    href="#"
-                    ><img src="../images/icon-todo.svg" alt="" />
-                    <p class="flex">TodoList</p></a
-                  >
-                  <a
-                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
-                    href="#"
-                    ><img src="../images/icon-calendar.svg" alt="" />
-                    <p>Calenders</p></a
-                  >
-                  <a
-                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
-                    href="#"
-                  >
-                    <img src="../images/icon-reminders.svg" alt="" />
-                    <p>Reminders</p></a
-                  >
-                  <a
-                    class="hover:text-black w-full flex gap-x-2 nowrap items-center"
-                    href="#"
-                  >
-                    <img src="../images/icon-planning.svg" alt="" />
-                    <p>Planning</p></a
-                  >
-                </div>
-              </li>
-              <li class="dropdown hover:text-black">
                 <a class="dropbtn flex gap-x-2 items-center group" href=""
-                  ><p>Company</p>
-                  <span><img src="../images/icon-arrow-down.svg" alt="" /></span
-                ></a>
-
+                  ><p>Features</p>
+                  <span class="icon_img">
+                    <img src="../images/icon-arrow-down.svg" alt="" />
+                  </span>
+                </a>
                 <div
-                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
-                >
-                  <a class="hover:text-black w-full" href="#">History</a>
-                  <a class="hover:text-black w-fit" href="#">Our Team</a>
-                  <a class="hover:text-black w-full" href="#">Blog</a>
-                </div>
-              </li>
-              <li class="hover:text-black"><a href="">Careers</a></li>
-              <li class="hover:text-black"><a href="">About</a></li>
-            </ul>
-          </div>
-
-          <!-- mobile navbar -->
-          <div class="w-full p-4 ">
-            <ul
-              class="flex flex-col md:hidden gap-y-6 justify-centeritems-start font-semibold p_text"
-            >
-              <li class="dropdown hover:text-black">
-                <a class="dropbtn" href="">Features</a>
-                <div
-                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                  class="dropdown_content lg_dropdown_content absolute rounded-lg py-3 flex flex-col gap-y-2"
                 >
                   <a
                     class="hover:text-black w-full flex gap-x-2 nowrap items-center"
@@ -114,17 +62,16 @@
                   >
                 </div>
               </li>
-              <li class="dropdown hover:text-black group">
+              <li class="dropdown hover:text-black">
                 <a class="dropbtn flex gap-x-2 items-center group" href=""
                   ><p>Company</p>
                   <span class="icon_img">
-                    <img class="group"  src="../images/icon-arrow-down.svg" alt="" />
-                    <img  src="../images/icon-arrow-down.svg" alt="" />
-                </span>
-            </a>
+                    <img src="../images/icon-arrow-down.svg" alt="" />
+                  </span>
+                </a>
 
                 <div
-                  class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                  class="dropdown_content lg_dropdown_content absolute rounded-lg py-3 flex flex-col gap-y-2 left-0"
                 >
                   <a class="hover:text-black w-full" href="#">History</a>
                   <a class="hover:text-black w-fit" href="#">Our Team</a>
@@ -134,42 +81,144 @@
               <li class="hover:text-black"><a href="">Careers</a></li>
               <li class="hover:text-black"><a href="">About</a></li>
             </ul>
-            <div class="flex flex-col md:justify-end md:gap-x-2 md:flex-row gap-y-2 mt-3">
-              <button
-                class="rounded-lg border-2 border-solid py-2 px-4 transition duration-300 ease-in-out hover:border-gray-500 font-semibold p_text"
-              >
-                Login
-              </button>
-              <button
-                class="rounded-lg border-2 border-solid border-gray-500 px-4 py-2 font-semibold p_text"
-              >
-                Register
-              </button>
+            <div class="flex md:hidden cursor-pointer" id="openNav" >
+              <span onclick="openNav()"><img src="../images/icon-menu.svg" alt="" /></span>
             </div>
+          </div>
+
+          <!-- mobile navbar -->
+          <div class=" z-10 w-full flex flex-col md:hidden">
+            <div id="mobile_view" 
+              class="mobile_view flex justify-end top-0 min-h-screen h-full z-10 absolute md:hidden w-full"
+            >
+              <div class="bg-white w-60 min-w-50 p-7 pb-7 h-full">
+                <div class="w-full flex justify-end py-3 mb-2">
+                   <span class="cursor-pointer" onclick="closeNav()"> <img src="../images/icon-close-menu.svg" alt=""></span>
+                </div>
+                <ul
+                  class="flex flex-col gap-y-6 justify-centeritems-start font-semibold p_text"
+                >
+                  <li class="dropdown hover:text-black group">
+                    <a class="dropbtn flex gap-x-2 items-center group" href=""
+                      ><p>Features</p>
+                      <span class="icon_img">
+                        <img
+                          src="../images/icon-arrow-down.svg"
+                          alt="icon-arrow-down"
+                        />
+                      </span>
+                    </a>
+                    <div
+                      class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                    >
+                      <a
+                        class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                        href="#"
+                        ><img src="../images/icon-todo.svg" alt="" />
+                        <p class="flex">TodoList</p></a
+                      >
+                      <a
+                        class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                        href="#"
+                        ><img src="../images/icon-calendar.svg" alt="" />
+                        <p>Calenders</p></a
+                      >
+                      <a
+                        class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                        href="#"
+                      >
+                        <img src="../images/icon-reminders.svg" alt="" />
+                        <p>Reminders</p></a
+                      >
+                      <a
+                        class="hover:text-black w-full flex gap-x-2 nowrap items-center"
+                        href="#"
+                      >
+                        <img src="../images/icon-planning.svg" alt="" />
+                        <p>Planning</p></a
+                      >
+                    </div>
+                  </li>
+                  <li class="dropdown hover:text-black group">
+                    <a class="dropbtn flex gap-x-2 items-center group" href=""
+                      ><p>Company</p>
+                      <span class="icon_img">
+                        <img src="../images/icon-arrow-down.svg" alt="" />
+                      </span>
+                    </a>
+
+                    <div
+                      class="dropdown_content rounded-lg py-3 flex flex-col gap-y-2 left-0"
+                    >
+                      <a class="hover:text-black w-full" href="#">History</a>
+                      <a class="hover:text-black w-fit" href="#">Our Team</a>
+                      <a class="hover:text-black w-full" href="#">Blog</a>
+                    </div>
+                  </li>
+                  <li class="hover:text-black"><a href="">Careers</a></li>
+                  <li class="hover:text-black"><a href="">About</a></li>
+                </ul>
+                <div class="flex flex-col gap-y-2 mt-7">
+                  <button
+                    class="rounded-xl border-2 border-solid py-2 px-4 transition duration-300 ease-in-out hover:border-gray-500 hover:text-black font-semibold p_text"
+                  >
+                    Login
+                  </button>
+                  <button
+                    class="rounded-xl border-2 border-solid border-gray-500 hover:text-black px-4 py-2 font-semibold p_text"
+                  >
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- MD> screen -->
+          <div class="hidden md:flex justify-end gap-x-2">
+            <button
+              class="rounded-xl border-2 border-solid py-2 px-4 transition duration-300 ease-in-out hover:border-gray-500 hover:text-black font-semibold p_text"
+            >
+              Login
+            </button>
+            <button
+              class="rounded-xl border-2 border-solid border-gray-500 hover:text-black px-4 py-2 font-semibold p_text"
+            >
+              Register
+            </button>
           </div>
         </nav>
 
-
         <!-- main component -->
-        <main class="grid grid-cols-2 gap-x-5 w-full text-start">
-          <div class="flex flex-col items-start w-full gap-y-14 pt-24">
-            <h1 class="text-3xl md:text-6xl font-bold">
-              Make <br />
+        <main
+          class="flex flex-col-reverse md:grid pb-10 md:grid-cols-2 gap-x-5 w-full px-6 md:px-10"
+        >
+          <div
+            class="flex flex-col md:text-left w-full gap-y-5 md:gap-y-8 lg:gap-y-14 pt-24 items-center md:items-start"
+          >
+            <h1 class="text_h text-4xl lg:text-6xl font-bold text-center md:text-left">
+              Make <br class="hidden md:block" />
               remote work
             </h1>
-            <div class="font-semibold p_text">
+            <div class="font-semibold p_text text-left hidden lg:flex flex-col">
               <p>Get your team in sync, no matter your location.</p>
               <p>Streamline processes, create team rituals, and</p>
               <p>watch productivity soar.</p>
             </div>
+            <div class="p_text text-center md:text-left flex flex-col lg:hidden">
+              <p>
+                Get your team in sync, no matter your location.Streamline
+                processes, create team rituals, and watch productivity soar.
+              </p>
+            </div>
+
             <button
-              class="rounded-lg border border-solid border-black px-5 py-2 bg-black btn_color font-semibold hover:text-white"
+              class="rounded-lg border border-solid border-black px-5 py-3 text-lg bg-black btn_color font-semibold hover:text-white"
             >
               Learn more
             </button>
-            <div class="w-full">
+            <div class="w-full mt-5 md:mt-0">
               <div
-                class="flex items-center justify-between w-full gap-x-2 h-6 pr-5"
+                class="flex items-center justify-between w-full gap-x-2 w-full px-3 md:px-0 md:h-6 md:pr-5"
               >
                 <img class="h-full" src="../images/client-databiz.svg" alt="" />
                 <img
@@ -182,8 +231,8 @@
               </div>
             </div>
           </div>
-          <div>
-            <div>
+          <div class="mt-16 md:mt-0">
+            <div class="md:p-6">
               <img
                 class="hidden md:block"
                 src="../images/image-hero-desktop.png"
@@ -199,5 +248,6 @@
         </main>
       </div>
     </section>
+    <script src="./index.js"></script>
   </body>
 </html>

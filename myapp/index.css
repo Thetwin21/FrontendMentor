@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@500&display=swap');
+
+body{
+font-family: 'Rubik', sans-serif;
+}
+
 .p_text {
     color: #8c8c8c;
 }
@@ -5,8 +11,23 @@
     color:  #d9d9d9;
 }
 
+.text_h {
+    /* font-size: 10vmin; */
+    line-height: normal;
+}
+.mobile_view{
+    transform: translateX(120%);
+    transition: all 0.5s ease-in-out;
+    background: #00000091;
+}
+.open_navtoggle{
+    transform: translateX(0%);
+    /* z-index: 1000;    */
+}
+
 .dropdown {
     position: relative;
+    transition: all 0.6s ease-in-out;
 }
 
 /* Style the dropdown button */
@@ -18,14 +39,15 @@
   /* Style the dropdown content (hidden by default) */
   .dropdown_content {
     display: none;
-    position: absolute;
-    background-color: #fff;
     padding: 22px;
     width: fit-content;
     right: 0;
     min-width: calc(fit-content + 10px);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.lg_dropdown_content {
     z-index: 1;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: #fff;
   }
   .dropdown_content a {
     color: #8c8c8c;
@@ -40,6 +62,5 @@
   }
   .dropdown:hover .icon_img {
     transform: rotate(180deg);
-    display: none;
   }
   
